@@ -26,9 +26,9 @@ The recommended docker run command for the container:
 docker run -d  \ <br>
    -v /var/lib/loginsight-agent:/var/lib/loginsight-agent \ <br>
    -v /var/log:/var/log  \ <br>
-   --hostname=`hostname`   \ <br>
+   --hostname=\`hostname\`   \ <br>
    --name liagent  \ <br>
-   -e "LI_SERVER=<YOUR LOGINSIGHT SERVER>"  \ <br>
+   -e "LI_SERVER=\<YOUR LOGINSIGHT SERVER\>"  \ <br>
    ww4vmware/vmware-liagent  
    
 
