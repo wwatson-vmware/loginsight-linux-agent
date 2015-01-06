@@ -6,7 +6,9 @@ VMware Log Insight linux agent container available on Docker index as ww4vmware/
 The Log Insight Linux Agent collects events from log files on Linux machines and forwards them to the Log Insight server.
 In a Linux system, applications can store log data in flat text files on the file system. The Log Insight Linux Agent can monitor directories and collect events from flat text log files.
 The Log Insight Linux Agent runs as a daemon and starts immediately after installation. After installation, you can configure the following options:
+
 ■  Select the target Log Insight server to which the Log Insight Linux Agent forwards events.
+
 ■  Configure which directories the Log Insight Linux Agent monitors. By default the Log Insight Linux Agent is configured to collect messages and syslog files from the /var/log directory.
 [filelog|messages]
 directory=/var/log
