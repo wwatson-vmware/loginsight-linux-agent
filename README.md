@@ -28,17 +28,17 @@ docker run -d  \ <br>
    -v /var/log:/var/log  \ <br>
    --hostname=`hostname`   \ <br>
    --name liagent  \ <br>
-   -e "LI_SERVER=192.168.1.17"  \ <br>
+   -e "LI_SERVER=<YOUR LOGINSIGHT SERVER>"  \ <br>
    ww4vmware/vmware-liagent  
    
 
 Details:
--v /var/lib/loginsight-agent:/var/lib/loginsight-agent  mounts the agent configuration directory from the docker host, this provides easy access for updating or changing the config.  If you want to add additional logfile configurations to the agent, you can create a file called liagent-add.ini in this location on the host prior to running the container, these configs will automatically be added to the configuration file at runtime.  The format of the file will be as shown above.
+-v /var/lib/loginsight-agent:/var/lib/loginsight-agent  <br>Mounts the agent configuration directory from the docker host, this provides easy access for updating or changing the config.  If you want to add additional logfile configurations to the agent, you can create a file called liagent-add.ini in this location on the host prior to running the container, these configs will automatically be added to the configuration file at runtime.  The format of the file will be as shown above.
 
--v /var/log:/var/log mounts the docker host /var/log directory from the docker host, all other containers on this host will also have to mount /var/log from the host for the agent to pick them up. Another option is to create a volume and use this --volumes-from option with the other containers.
+-v /var/log:/var/log <br>Mounts the docker host /var/log directory from the docker host, all other containers on this host will also have to mount /var/log from the host for the agent to pick them up. Another option is to create a volume and use this --volumes-from option with the other containers.
 
---hostname=`hostname` will force the container to use the hostname of the docker host so that management of the agent in the UI is easier.
+--hostname=`hostname` <br>Will force the container to use the hostname of the docker host so that management of the agent in the UI is easier.
 
---e "LI_SERVER=192.168.1.17" will set the agent to point to the Log Insight Server
+--e "LI_SERVER=<YOUR LOGINSIGHT SERVER>" <br>Will set the agent to point to the Log Insight Server
 
 There is no need to specify a command as it is already configured in the Dockerfile.
