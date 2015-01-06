@@ -37,8 +37,8 @@ Details:
 
 -v /var/log:/var/log <br>Mounts the docker host /var/log directory from the docker host, all other containers on this host will also have to mount /var/log from the host for the agent to pick them up. Another option is to create a volume and use this --volumes-from option with the other containers.
 
---hostname=`hostname` <br>Will force the container to use the hostname of the docker host so that management of the agent in the UI is easier.
+--hostname=\`hostname\` <br>Will force the container to use the hostname of the docker host so that management of the agent in the UI is easier.
 
---e "LI_SERVER=<YOUR LOGINSIGHT SERVER>" <br>Will set the agent to point to the Log Insight Server
+--e "LI_SERVER=\<YOUR LOGINSIGHT SERVER\>" <br>Will set the agent to point to the Log Insight Server
 
 There is no need to specify a command as it is already configured in the Dockerfile.
