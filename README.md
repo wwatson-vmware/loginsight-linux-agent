@@ -1,4 +1,4 @@
-loginsight-linux-agent
+VMware LogInsight Linux Agent
 ======================
 
 VMware Log Insight linux agent container available on Docker index as ww4vmware/vmware-liagent.
