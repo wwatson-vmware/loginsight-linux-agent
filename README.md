@@ -11,25 +11,25 @@ The Log Insight Linux Agent runs as a daemon and starts immediately after instal
 
 ■  Configure which directories the Log Insight Linux Agent monitors. By default the Log Insight Linux Agent is configured to collect messages and syslog files from the /var/log directory.
 
-[filelog|messages] <br>
-directory=/var/log <br>
-include=messages;messages.? <br>
+[filelog|messages] 
+directory=/var/log 
+include=messages;messages.? 
 
-[filelog|syslog] <br>
-directory=/var/log <br>
-include=syslog;syslog.? <br>
+[filelog|syslog] 
+directory=/var/log 
+include=syslog;syslog.? 
 
 The container is based on ubuntu 14.04 and uses supervisor to manage the agent daemon.  
 
 The recommended docker run command for the container:
 
-docker run -d  \ <br>
-   -v /var/lib/loginsight-agent:/var/lib/loginsight-agent \ <br>
-   -v /var/log:/var/log  \ <br>
-   --hostname=\`hostname\`   \ <br>
-   --name liagent  \ <br>
-   -e "LI_SERVER=\<YOUR LOGINSIGHT SERVER\>"  \ <br>
-   ww4vmware/vmware-liagent  
+docker run -d  \ 
+   -v /var/lib/loginsight-agent:/var/lib/loginsight-agent \ 
+   -v /var/log:/var/log  \ 
+   --hostname=\`hostname\`   \ 
+   --name liagent  \ 
+   -e "LI_SERVER=\<YOUR LOGINSIGHT SERVER\>"  \ 
+   ww4vmware/vmware-liagent
    
 
 Details:
