@@ -11,13 +11,13 @@ The Log Insight Linux Agent runs as a daemon and starts immediately after instal
 
 ■  Configure which directories the Log Insight Linux Agent monitors. By default the Log Insight Linux Agent is configured to collect messages and syslog files from the /var/log directory.
 
-[filelog|messages] 
+`[filelog|messages] 
 directory=/var/log 
 include=messages;messages.? 
 
 [filelog|syslog] 
 directory=/var/log 
-include=syslog;syslog.? 
+include=syslog;syslog.?`
 
 The container is based on ubuntu 14.04 and uses supervisor to manage the agent daemon.  
 
